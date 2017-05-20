@@ -1,6 +1,6 @@
 @echo off
 rem Request an update from gh
-git pull origin master
+git pull origin IBCInternal
 
 set APPPATH="c:\billgenerator\IBCBillGenerator"
 set COMMON_PATH="..\common\jars"
