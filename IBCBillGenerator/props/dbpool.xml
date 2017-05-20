@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Application Databases the Object Pool manager is allowed to work with -->
+<dbpool>
+	<database name="TESTDB">
+		<driver>com.informix.jdbc.IfxDriver</driver>
+		<url>jdbc:informix-sqli://localhost:18940/pactrak:INFORMIXSERVER=vptdev</url>
+	</database>
+	
+	<database name="PACTRAK">
+		<driver>com.informix.jdbc.IfxDriver</driver>
+		<url>jdbc:informix-sqli://localhost:18941/pactrak:INFORMIXSERVER=vptprod</url>
+	</database>
+	
+	<database name="PACTRAK.LHR">
+		<driver>com.informix.jdbc.IfxDriver</driver>
+		<url>jdbc:informix-sqli://localhost:18941/pt_lhr:INFORMIXSERVER=vptprod</url>
+	</database>
+</dbpool>

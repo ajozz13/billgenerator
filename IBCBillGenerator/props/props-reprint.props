@@ -1,0 +1,8 @@
+useSecondStore=false
+printer=LAS
+debug=false
+reprint=true
+hideAbxLogo=false
+storePath=C:/data
+profilePath=C:/IBC/profiles
+billHost=carrot.ibcinc.com

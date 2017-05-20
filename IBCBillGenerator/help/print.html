@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>IBC BillGenerator - Help - about</title>
+<link href="style/billgen-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF">
+<table width="720" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td align="left"><img src="../images/ibc-large.gif"></td>
+<td align="right"><span class="header"><i>[BILLGEN</i> HELP<i>]</i></span></td>
+</tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr><td align="center" colspan="2"><br />
+<span class="subheader"> -- Print Airwaybills (Step by Step) -- </span></td>
+</tr>
+</table>
+<!-- END HEADING  -->
+<br />
+<table width="720" cellpadding="0" cellspacing="0" align="center">
+<tr><td>
+<blockquote class="txt">
+<p>
+	In order to produce accurate IBC Airwaybills you will need:
+    <ul>
+    	<li>IBC Shipper account number and information such as Shipper name, address, etc.</li>
+        <li>The attributes of the merchandise that is beign shipped, such as the weight, value, description, packaging, and definition (DOCS or APX)</li>
+        <li>The types of services requested by the Shipping customer, such as second day delivery.</li>
+       <li>The Excel or CSV file containing the consignee addresses.  It is very important to browse the file for accuracy as we cannot process airwaybills with missing name, or address fields.</li>
+    </ul>
+</p>
+<br />
+<p>
+	To begin printing Airwaybills:
+    <ol>
+    <li><b>Required} </b>Open the IBC Airwaybill program, you will be prompted to choose a database from
+    	<ul><li>PACTRAK - for distributions that originate in the US.</li>
+        	<li>PACTRAK.LHR - for distributions that originate in the UK.</li>
+            <li>TESTDB - for testing purposes.</li>
+        </ul>
+     </li>
+     <li><b>Required} </b>Type in your IBC username and password.
+     </li>
+    	<li><b>Required} </b>Open the CSV file (File -> Open or CTRL+O). <br />
+        The file will load into the main program window. You may open multiple CSV files and the program will accomodate each file as a new tab. Only the current selected tab (File) will be used when creating Airwaybills.</li>
+        <li><b>Required} </b>Enter the shipper information (Edit -> Shipper or CTRL+R).  <br />
+		This Information must be filled out correctly and corresponds to the IBC Customer that generated the Consignee list
+		and is sending the shipments.  It is very important to be accurate with the shipper's Account Number, Reference Number,
+		Second Reference number if any, etc.  The Shipper reference number can contain a value that is read directly from the file.
+		You can choose to have such value placed in the middle of the reference string by using a wild card value or by default
+		at the end of the string. There are three available wild card values (<b>$A, $B, $C</b>) for a maximum of 3 actual entries read from the input file.
+		For example, if you needed to create a reference field that contained the Lot Value read from the
+		file  you would write a string like this on the value field:  BULK <b>$A</b>, LOT A   Where the $A is the value that is going to
+		be read from the file.  You may also repeat that same value later in the string by typing another $A wild card in another place on the reference string.
+		By default the first value draged into the reference list when you prepare the output, will be reference to $A, the second to $B and the third to $C.
+		If you request 3 entries in your reference string, make sure you pass 3 variables to the drag and drop list, or the print request will stop.  If you
+		request 2 variables and pass more than 2 on the drag and drop list, only the referenced values will actually be placed on the reference field.
+		Also, by default the reference value(s) will be added at the end of the string if no wild card value is specified. 
+		You can now load and save your default shipper information into a parameter file. It is prefered to store this files in the default
+		selected storage path for easy loading from other users.  Simply click the "Load" or "Save" option from the Shipper Information Box.
+
+        </li>
+        <li>Enter Shipment's description (Edit -> Description or CTRL+D). <br /> This is where the static value for the description will be defined, otherwise leave blank.</li>
+        <li>Enter the Shipment's Information (Edit -> Shipement Info or CTRL+M). <br /> This is where all the static values pertaining to the shipments will be entered, including port of origin, value, weight, Service Level, etc, will be entered. You must first activate the appropriate entry boxes by checking the desired check box next the desired text field(s) or drop-down box(es). 
+        </li>
+        <li>Select Additional "Run time" options (Edit -> Run Time Settings or CTRL+U).<bf />
+        In these section you will be able to select additional functions such as
+        <ul>
+        <li>DHL Routing - based on each of the 3 main IBC Stations MIA, NYC and LAX. If needed you must select the appropriate station from which DHL will pick up or route the shipments.</li>
+        <li>AWB Settings - such as Multilot printing is useful when you had Distributions with dynamic quantity fields and each item must have it's own copy of the airwaybill.  The corresponding airwaybill will have the label 1 of TOTAL# requested in the CSV file.<br />
+        Here you will also be able to request that an output file be created which reports: the date and time the airwaybill is created, the airwaybill number and the consignee address.<br />
+        In here you will also be able to request that the final output files be created in a 4 per page "Label" format.  You must have access to a special 4 per page label sheet to be able to request these.
+        </li>
+        <li>Lastly you can  select to use LBS or KILOS as the default weight qualifier.</li>
+        </ul>
+        <li>On the current tab select the desired amount of Airwaybills to be created or Select ALL (CTRL+A) and click on the Print Icon (CTRL+P) to begin the Print Process.
+        </li>
+        <li>You will be prompted to DRAG and DROP the Column headers of the selected CSV files, into the Airwaybill sections. For example, on an input file that contains the headers FIRST_NAME, and LAST_NAME, these headers would be DRAGGED into the column Name in the DRAG-N-DROP window in the proper order (FIRST_NAME first and LAST_NAME second).  Here is a list of all of the DRAG-N-DROP columns 
+        <ul><li>Name</li><li>Company</li><li>Address</li><li>City</li><li>State</li><li>Zip</li><li>Country</li><li>Phone</li><li>Qty</li><li>Weight</li><li>Reference</li><li>2nd Reference</li>
+        <li>Destination</li><li>Description</li>
+        </ul>
+        All of these headers represent static data that will be read from the file and filled into each airwaybill, and these configuration can be stored and loaded on distributions where the headers on the file provided don't change.
+        </li>
+        <li>The Program will reserve Airwaybill numbers for each of the rows in the file, produce the output file (if requested), store the data in the selected database, and if all the data is successfully stored, the program will pause and ask the user to proceed with the printout.  The last step is to simply choose a printer, load the paper and print.</li>
+      </ol>
+</p>     
+</blockquote>
+<hr>
+</td></tr>
+<tr><td align="right"><a class="link" href="help.html">Main Menu</a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+

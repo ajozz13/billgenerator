@@ -1,0 +1,12 @@
+ASAP
+FirstClassMail
+No Shipcond
+Regular
+Express
+USA
+USA-2
+USA-3
+USA-PM
+USA-SAT
+USG
+Van Delivery

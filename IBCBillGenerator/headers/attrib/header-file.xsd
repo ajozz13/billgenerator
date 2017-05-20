@@ -1,0 +1,140 @@
+ <?xml version="1.0" encoding="UTF-8" ?> 
+ <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="Address">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="airbillPrintout">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="Name" /> 
+  <xs:element ref="Company" /> 
+  <xs:element ref="Address" /> 
+  <xs:element ref="City" /> 
+  <xs:element ref="State" /> 
+  <xs:element ref="Zip" /> 
+  <xs:element ref="Country" /> 
+  <xs:element ref="Phone" /> 
+  <xs:element ref="Qty" /> 
+  <xs:element ref="Weight" /> 
+  <xs:element ref="Reference" /> 
+  <xs:element ref="SecondRef" /> 
+  <xs:element ref="Destination" /> 
+  <xs:element ref="Value" />
+  <xs:element ref="Description" /> 
+  <xs:element ref="Awb" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Awb">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="City">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Company">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Country">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Description">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Destination">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Value">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Name">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="option">
+  <xs:complexType mixed="true" /> 
+  </xs:element>
+ <xs:element name="Phone">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Qty">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Reference">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="SecondRef">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="State">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Weight">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+ <xs:element name="Zip">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element ref="option" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  </xs:schema>

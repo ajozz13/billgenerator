@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>IBC BillGenerator - Help - about</title>
+<link href="style/billgen-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF">
+<table width="720" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td align="left"><img src="../images/ibc-large.gif"></td>
+<td align="right"><span class="header"><i>[BILLGEN</i> HELP<i>]</i></span></td>
+</tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr><td align="center" colspan="2"><br />
+<span class="subheader"> -- Format of the CSV file -- </span></td>
+</tr>
+</table>
+<!-- END HEADING  -->
+<br />
+<table width="720" cellpadding="0" cellspacing="0" align="center">
+<tr><td>
+	<blockquote class="txt">
+    <p>
+	   A CSV file is a text based file that contains information in a comma-delimited format.
+       Usually the first line of text displayed, contains the headers of the file.
+       An example of headers that may be provided to the program are:
+        <ul>
+                                <li>FULLNAME - Name of Consignee  <i>(Required)</i>
+                                <li>COMPANY - Company name of the Consignee
+                                <li>ADDRESS1 - Address for delivery <i>(Required)</i>
+                                <li>ADDRESS2 - Additional address field
+                                <li>CITY - City name (Required)
+                                <li>STATE - State name  <i>(Required for US addresses)</i>
+                                <li>ZIPCODE - Zip Code  (Required for US addresses)
+                                <li>COUNTRY - Country name  <i>(Required)</i>
+                                <li>DESCRIPTION - Field for notes
+                                <li>QTY - Field for quantity shipped
+								<li>WEIGHT - Shipment Weight
+        </ul>
+</p>
+<p>
+The CSV file can be generated directly from the customer or the file can be created from an existing Excel file, simply choose File -> "Save as" from the Excel Menu and on the file type drop-down select CSV format and save.
+</p>
+<br>
+<p>
+The IBC Airwaybill consists of 3 main parts, Shipper Information, Consignee Information and Shipment Information.  For the purposes of creating IBC Airwaybills with a CSV file, there are 2 types of data that is processed by the BillGenerator program, static and variable data.
+</p>
+<br>
+<p>
+<b>Static</b> data refers to information that will be the same on every airwaybill, like the Shipper's information, such as account number, Shipper's name, address, etc.  In constrast, the Consignee's information is en example of <b>Variable</b> information, as it will be different on each airwaybill created.  The Shipment's information is made up with data that can be Static or Variable.  If you set the Shipment's weight for example, as a global parameter, then every airwaybill will have this value, otherwise, if declared properly, this value will be processed from the file.  Essentially, every line of the CSV file is the Variable information of an IBC Airwaybill, and contians Consignee and Shipment information.
+</p>          
+	</blockquote>
+    <hr>
+</td></tr>
+<tr><td align="right"><a class="link" href="help.html">Main Menu</a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>International Bonded Couriers - Help</title>
+</head>
+<body bgcolor="#FFFFFF">
+<blockquote>
+<div align="center">
+        <img src="../images/ibc-large.gif">
+</div>
+<font face="Verdana,Arial,Helvetica" size="3">
+<h1 align="center">IBC Bill Generator Help Page</h1>
+    	<a href="help.html#100"><b>About this Program</b></a><br>
+        <a href="help.html#101"><b>Format of CSV file</b></a><br>
+        <a href="help.html#102"><b>Print and Save Airwaybills from CSV</b></a><br>
+        <a href="help.html#103"><b>Printer Format Options</b></a><br>
+        <a href="help.html#109"><b>Important Information</b></a><br>
+<ol>
+        <li><a name="100"><b>About This Program</b></a>
+        <p>
+                IBC Bill Generator is a program that allows you to load consignee information from
+                a CSV file.  The program creates physical airwaybills and inputs the pertinent data
+                from the CSV file into the IBC database.  
+        <p>        
+        <li><a name="101"><b>Format of CSV file</b></a>
+        <p>
+                A CSV file is a text based file that contains information in a comma-delimited format.
+                Usually the first line of text displayed, are the headers of the file.
+                An example of headers needed for the program are:
+                        <ul>
+                                <li>NOTES - Field for notes
+                                <li>QTY - Field for quantity shipped
+                                <li>FULLNAME - Name of Consignee
+                                <li>COMPANY - Company name of the Consignee
+                                <li>ADDRESS1 - Address for delivery
+                                <li>ADDRESS2 - Additional address field
+                                <li>CITY - City name 
+                                <li>STATE - State name
+                                <li>ZIPCODE - Zip Code
+                                <li>COUNTRY - Country name
+				<li>WEIGHT - Shipment Weight
+                        </ul>
+                The above fields are not the only fields allowed, the file may contain additional fields,
+                which can be used to alter the output of the airbill print jobs. However the above fileds
+                are normally saved into the database.
+                
+                By beign consistent with the entry fields we can assure good transactions are beign generated,
+                printed and stored into the database.
+        
+        <p>
+         <li><a name="102"><b>Print and Save Airwaybills from CSV</b></a>
+              <p>
+                To print the airwaybills from a CSV file follow these steps:
+                        <ul>
+                                <li>Enter the <a href="help.html#104">shipper information </a>(Edit - Shipper).
+				<li>(Optional)<a href="help.html#105">Enter the shipment default information (Edit - Shipment Info).</a>
+				<li>(Optional)<a href="help.html#106">Enter the Run Time Settings (Edit - Run Time Settings).</a>
+                                <li>Open a file by cliking on the "Open" File Button.
+                                <li>Double click to select the file you wish to open.
+                                <li>The program will load the entries into the program table.
+                                <li>Select the rows you wish to print and save into the database or Select - All.
+                                <li>Click on the Print icon to begin the print Process.
+                                <li>Next, the "Customize Airbill Printout Page" appears. Simply drag and drop
+                                    your column headers, into each Airwaybill field.
+                                <li>Once, your headers are arranged, Click Done to continue.
+                                <li>Next, the "Printer" Window appears, you can choose the printer to direct
+                                    your airwaybills.  Make sure you select the correct printer for the formatting
+                                    option specified in the <a href="help.html#103">"Printer" format select menu.</a>
+                                <li>Collect the airbills from the printer.  At this time the entries have been saved
+                                    into the IBC database.
+                        </ul>
+         
+         <p>
+         <li><a name="103"><b>Printer Format Options</b></a>
+          <p>
+                Currently, the program supports 3 printer format options:
+                 <ul>
+                        <li>Laser Printer - The Default option which formats airwaybills to print on laser printers.
+                        <li>Okidata - Formats output for IBC paper airwaybills on the following models: Okidata 320, Okidata 3410.
+                        <li>Lexmark Forms - formats output for NYC's airbill printer.
+                 </ul>             		
+	<p>
+	<li><a name="104"><b>Shipper Default Information</b></a>
+	<p>
+		This Information must be filled out correctly and corresponds to the IBC Customer that generated the Consignee list
+		and is sending the shipments.  It is very important to be accurate with the shipper's Account Number, Reference Number,
+		Second Reference number if any, etc.  The Shipper reference number can contain a value that is read directly from the file.
+		You can choose to have such value placed in the middle of the reference string by using a wild card value or by default
+		at the end of the string. There are three available wild card values (<b>$A, $B, $C</b>) for a maximum of 3 actual entries read from the input file.
+		For example, if you needed to create a reference field that contained the Lot Value read from the
+		file  you would write a string like this on the value field:  BULK <b>$A</b>, LOT A   Where the $A is the value that is going to
+		be read from the file.  You may also repeat that same value later in the string by typing another $A wild card in another place on the reference string.
+		By default the first value draged into the reference list when you prepare the output, will be reference to $A, the second to $B and the third to $C.
+		If you request 3 entries in your reference string, make sure you pass 3 variables to the drag and drop list, or the print request will stop.  If you
+		request 2 variables and pass more than 2 on the drag and drop list, only the referenced values will actually be placed on the reference field.
+		Also, by default the reference value(s) will be added at the end of the string if no wild card value is specified. 
+		<br>
+		You can now load and save your default shipper information into a parameter file. It is prefered to store this files in the default
+		selected storage path for easy loading from other users.  Simply click the "Load" or "Save" option from the Shipper Information Box.
+
+	<p>
+	<li><a name="105"><b>Shipment Default Information</b></a>
+	<p>	
+		The shipment default information includes Origin Code, Destination Code, shipment Weight, Value, Number Of Pieces, etc.
+		For weight and pieces, the value should be left blank if the file provides this information. 
+		From the dropdown boxes you can choose the packaging, terms and contents of the shipment.
+		To set each of the above values click on the checkbox and proceed enter the value or select the item from the dropdown box.
+		To remove a value, simply un-check the adjacent check-box of the desired value.
+
+	<p>
+	<li><a name="106"><b>Run Time Settings</b></a>
+	<p>
+
+		There are 4 different Run Time Settings you can edit to change the output on the laser printed airwaybills or to create an output file.
+		<ol>
+			<li><b>Label Printing</b>: When this option is selected, your printouts will be ready for labels.  These laser labels measure 3.5" by 5" and are only
+				   available for a laser printer.  Each label sheet contains 4 of these labels so if you calculate the selected input and divide this number by 4 
+				   you will get the exact number of label sheets to be used. Remember to round up to the next whole number. Hint, You can view the Stats (CTRL + t) to
+				   view the file statistics.
+			<li><b>Airborne Routing</b>: This setting generates the airborne routing codes needed for shipments routed through airborne.
+			       This setting is set to on by default. (Only available for US Shipments)Make sure your country value defaults to US, USA, or United States.
+			<li><b>ABX Logo</b>: If you are not routing the list through Airborne you can choose to hide the ABX logo from the airwaybills.
+			<li><b>Multi Lot Printing</b>: Select this option if you need to generate multiple copies of an Airwaybill and display the MultiLot Message (1 of X)
+			       on each of the printed airwaybills. 
+			<li><b>Print Output</b>: When this option is selected an output file will be generated inside the output folder. This file contains the consignee information
+			       and the airwaybill number that corresponds to that consignee.  The date and time on each entry reflects the time the entry was created.
+		</ol>
+
+         <p>
+	 <li><a name="107"><b>DataBase</b></a>
+	<p>
+		Select the Database to Store your data to.  There are currently 3 options
+		<ol>
+			<li><b>Production:</b> This are for regular distribution lists for US Shipments when the origin is any of the US Stations.
+			<li><b>Production LHR:</b> This option is only for London UK lists.
+			<li><b>Test:</b> This option will use and store your information on the test Database. This should ONLY be use for test purposes.  The data store on this
+				         database will not be avialable on any of the other databases.
+		</ol>
+	<p>
+	<li><a name="108"><b>Weight</b></a>
+	<p>
+		Select the default weight unit for your distribution list. For example, a distribution list may contain a weight Value and a weight unit of LBS if specified by the
+		distributor of the list, or a weight unit of KGS.  By default all of the KGS units will be saved as pounds in the IBC databases, but displayed in either LBS or KGS depending
+		on the station's preferences.
+         <p>
+         <li><a name="109"><b>Important Information</b></a>
+              <p>
+                <b>Please let us know if you encounter any problems with this software at mis@ibcinc.com, or call
+                305-597-5227 for more information and support.</b>  Remember the steps you have taken to come to
+                the point where you encounter a problem before you call or send email.
+</ol>
+</font>
+</blockquote>
+</body>
+</html>
