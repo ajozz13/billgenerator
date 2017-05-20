@@ -4,5 +4,5 @@ debug=false
 reprint=false
 hideAbxLogo=false
 storePath=C:/data
-profilePath=C:/IBC/profiles
+profilePath=C:/billgenerator/profiles
 billHost=carrot.ibcinc.com
