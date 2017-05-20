@@ -1,5 +1,5 @@
 @echo off
-set APPPATH="c:\IBC\IBCBillGenerator"
+set APPPATH="c:\billgenerator\IBCBillGenerator"
 cd %APPPATH%
 set COMMON_PATH="..\common\jars"
 rem ==========================SET JAR PATH HERE
