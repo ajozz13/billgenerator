@@ -1,4 +1,7 @@
 @echo off
+rem Request an update from gh
+git pull origin master
+
 set APPPATH="c:\billgenerator\IBCBillGenerator"
 set COMMON_PATH="..\common\jars"
 set APP_CMDS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9696 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
